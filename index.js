@@ -1,4 +1,14 @@
-let a__ = 10;
-let b__ = 5;
+import express from "express";
 
-console.log(`${a__ + b__}`);
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+app.listen(4444, (err) => {
+    if (err) {
+        return console.log(err);
+    } 
+    console.log('Server OK');
+});
